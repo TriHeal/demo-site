@@ -1,6 +1,6 @@
 "use client";
 
-import type { Hotspot, Lang } from "../data";
+import type { Hotspot, Lang } from "./types";
 
 export function HotspotModal({
   hotspot,

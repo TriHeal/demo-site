@@ -5,11 +5,11 @@ import { HotspotModal } from "@/components/explainer/hotspot-modal";
 import { LangToggle } from "@/components/explainer/lang-toggle";
 import { RotatePrompt } from "@/components/explainer/rotate-prompt";
 import { SceneNav } from "@/components/explainer/scene-nav";
-import { ClinicScene } from "./components/clinic-scene";
+import { HomeScene } from "./components/home-scene";
 import { STRINGS } from "./data";
 import type { Hotspot, Lang } from "./data";
 
-export default function AtTheClinicPage() {
+export default function AtHomePage() {
   const [active, setActive] = useState<Hotspot | null>(null);
   const [lang, setLang] = useState<Lang>("he");
   const dir = lang === "he" ? "rtl" : "ltr";
@@ -22,7 +22,7 @@ export default function AtTheClinicPage() {
           it overflow into a scroll. */}
       <div className="flex h-full max-md:portrait:hidden flex-col p-4 [@media(max-height:520px)]:p-2">
         <div className="mb-1 flex shrink-0 items-center justify-between [@media(max-height:520px)]:mb-0">
-          <SceneNav lang={lang} current="/explainer/at-the-clinic" />
+          <SceneNav lang={lang} current="/explainer/at-home" />
           <LangToggle label={s.swapTo} onToggle={() => setLang(lang === "he" ? "en" : "he")} />
         </div>
 
@@ -36,7 +36,7 @@ export default function AtTheClinicPage() {
           <p className="mt-1 text-base opacity-75 [@media(max-height:520px)]:hidden">{s.subtitle}</p>
         </header>
 
-        <ClinicScene lang={lang} dir={dir} onSelect={setActive} />
+        <HomeScene lang={lang} dir={dir} onSelect={setActive} />
       </div>
 
       <RotatePrompt lang={lang} />

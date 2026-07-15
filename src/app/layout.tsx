@@ -13,9 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tri-Heal — At the Clinic",
-  description:
-    "Interactive walkthrough of a Tri-Heal therapy session: therapist, child, and the synced tools that connect them.",
+  title: {
+    default: "Tri-Heal Demo",
+    template: "%s · Tri-Heal",
+  },
+  description: "Interactive walkthrough of the Tri-Heal therapy flow: clinic session and home follow-up.",
   icons: {
     icon: [
       { url: "/favicon.ico" },

@@ -1,15 +1,6 @@
-export type Lang = "he" | "en";
+import type { Hotspot, Lang, Point } from "@/components/explainer/types";
 
-export type Hotspot = {
-  id: number;
-  badge: Record<Lang, string>;
-  title: Record<Lang, string>;
-  text: Record<Lang, string>;
-  x: number;
-  y: number;
-};
-
-export type Point = { x: number; y: number };
+export type { Lang, Hotspot, Point } from "@/components/explainer/types";
 
 export const HOTSPOTS: Hotspot[] = [
   {

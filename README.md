@@ -6,7 +6,7 @@ event processing, dashboard/home assignment), each opening a modal with a descri
 and a demo-video slot. Supports Hebrew (RTL, default) and English (LTR), with a
 language-toggle button.
 
-This is the only flow in the repo — the earlier therapist/child/parent live-sync demo
+This is the only flow in the repo - the earlier therapist/child/parent live-sync demo
 (Firebase Auth, Realtime Database, session codes, breathing/event-processing games) has
 been removed. `/` redirects straight to `/explainer/at-the-clinic`.
 
@@ -17,24 +17,24 @@ npm install
 npm run dev
 ```
 
-No environment variables or external services are required — everything is static
+No environment variables or external services are required - everything is static
 assets and client-side React state.
 
 ## Structure
 
-- `src/app/explainer/at-the-clinic/page.tsx` — top-level page, owns language + active-modal
+- `src/app/explainer/at-the-clinic/page.tsx` - top-level page, owns language + active-modal
   state.
-- `src/app/explainer/at-the-clinic/data.ts` — hotspot copy (Hebrew/English), positions,
+- `src/app/explainer/at-the-clinic/data.ts` - hotspot copy (Hebrew/English), positions,
   connector-line coordinates, and UI strings.
 - `src/app/explainer/at-the-clinic/components/`
-  - `clinic-scene.tsx` — the illustrated room, character/prop images, dashed connector
+  - `clinic-scene.tsx` - the illustrated room, character/prop images, dashed connector
     lines, and hotspot buttons.
-  - `hotspot-modal.tsx` — the click-through detail modal.
-  - `lang-toggle.tsx` — the Hebrew/English switch button.
-  - `rotate-prompt.tsx` — shown instead of the scene on small portrait screens (phones),
+  - `hotspot-modal.tsx` - the click-through detail modal.
+  - `lang-toggle.tsx` - the Hebrew/English switch button.
+  - `rotate-prompt.tsx` - shown instead of the scene on small portrait screens (phones),
     asking the user to rotate to landscape.
-- `public/explainer/` — background and character/device illustration assets.
-- `public/tri-heal-logo.svg` — source logo; favicon and touch-icon PNGs were generated
+- `public/explainer/` - background and character/device illustration assets.
+- `public/tri-heal-logo.svg` - source logo; favicon and touch-icon PNGs were generated
   from it and live in `public/`.
 
 ## Responsive behavior
@@ -51,4 +51,4 @@ vercel link
 vercel --prod
 ```
 
-No environment variables to configure — the app has no backend dependencies.
+No environment variables to configure - the app has no backend dependencies.

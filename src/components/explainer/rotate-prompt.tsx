@@ -1,7 +1,7 @@
 "use client";
 
 import { Smartphone } from "lucide-react";
-import type { Lang } from "../data";
+import type { Lang } from "./types";
 
 export function RotatePrompt({ lang }: { lang: Lang }) {
   return (
