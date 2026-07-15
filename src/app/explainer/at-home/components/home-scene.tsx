@@ -1,5 +1,6 @@
 "use client";
 
+import { assetPath } from "@/lib/asset-path";
 import { CONNECTORS, HOTSPOTS } from "../data";
 import type { Hotspot, Lang } from "../data";
 
@@ -16,7 +17,7 @@ export function HomeScene({
     <main className="relative mx-auto aspect-[3/2] max-h-full min-h-0 w-full max-w-[1440px] flex-1 overflow-hidden rounded-[28px] bg-white shadow-[0_18px_60px_rgba(18,59,73,0.15)]">
       {/* eslint-disable-next-line @next/next/no-img-element -- static illustration asset */}
       <img
-        src="/explainer-home/living-room-background.png"
+        src={assetPath("/explainer-home/living-room-background.png")}
         alt="Parent and child at home, sitting together with a tablet"
         className="pointer-events-none absolute inset-0 h-full w-full select-none object-cover"
       />

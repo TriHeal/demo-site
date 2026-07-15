@@ -6,6 +6,7 @@ import { LangToggle } from "@/components/explainer/lang-toggle";
 import { RotatePrompt } from "@/components/explainer/rotate-prompt";
 import { SceneNav } from "@/components/explainer/scene-nav";
 import type { Lang } from "@/components/explainer/types";
+import { assetPath } from "@/lib/asset-path";
 
 const SCENES = [
   {
@@ -51,7 +52,7 @@ export default function ExplainerHome() {
         <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-4 text-center [@media(max-height:520px)]:gap-2">
           {/* eslint-disable-next-line @next/next/no-img-element -- static logo asset */}
           <img
-            src="/tri-heal-logo.svg"
+            src={assetPath("/tri-heal-logo.svg")}
             alt="Tri-Heal logo"
             className="h-20 w-auto shrink-0 object-contain [@media(max-height:520px)]:h-10"
           />
@@ -67,21 +68,21 @@ export default function ExplainerHome() {
                 <div className="relative aspect-[3/2] shrink overflow-hidden transition group-hover:scale-105">
                   {/* eslint-disable @next/next/no-img-element -- static illustration preview */}
                   {"image" in scene ? (
-                    <img src={scene.image} alt={scene.title[lang]} className="h-full w-full object-cover" />
+                    <img src={assetPath(scene.image)} alt={scene.title[lang]} className="h-full w-full object-cover" />
                   ) : (
                     <>
                       <img
-                        src="/explainer/office-background.png"
+                        src={assetPath("/explainer/office-background.png")}
                         alt=""
                         className="absolute inset-0 h-full w-full select-none object-cover"
                       />
                       <img
-                        src="/explainer/therapist.png"
+                        src={assetPath("/explainer/therapist.png")}
                         alt=""
                         className="absolute left-[5%] top-[37%] w-[55%] select-none"
                       />
                       <img
-                        src="/explainer/child.png"
+                        src={assetPath("/explainer/child.png")}
                         alt=""
                         className="absolute left-[42%] top-[37%] w-[55%] select-none"
                       />

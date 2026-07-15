@@ -1,6 +1,7 @@
 "use client";
 
 import { Smartphone } from "lucide-react";
+import { assetPath } from "@/lib/asset-path";
 import type { Lang } from "./types";
 
 export function RotatePrompt({ lang }: { lang: Lang }) {
@@ -8,7 +9,7 @@ export function RotatePrompt({ lang }: { lang: Lang }) {
     <div className="hidden h-full flex-col items-center justify-center bg-gradient-to-b from-[#eaf6f3] via-[#f7fbfa] to-[#f7fbfa] p-6 text-center max-md:portrait:flex">
       <div className="flex w-full max-w-xs flex-col items-center gap-5 rounded-[28px] bg-white px-7 py-9 shadow-[0_18px_60px_rgba(18,59,73,0.12)]">
         {/* eslint-disable-next-line @next/next/no-img-element -- static logo asset */}
-        <img src="/tri-heal-logo.svg" alt="Tri-Heal logo" className="h-14 w-auto object-contain" />
+        <img src={assetPath("/tri-heal-logo.svg")} alt="Tri-Heal logo" className="h-14 w-auto object-contain" />
 
         <div className="grid h-16 w-16 place-items-center rounded-full bg-[#eaf6f3]">
           <Smartphone

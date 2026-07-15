@@ -5,6 +5,7 @@ import { HotspotModal } from "@/components/explainer/hotspot-modal";
 import { LangToggle } from "@/components/explainer/lang-toggle";
 import { RotatePrompt } from "@/components/explainer/rotate-prompt";
 import { SceneNav } from "@/components/explainer/scene-nav";
+import { assetPath } from "@/lib/asset-path";
 import { HomeScene } from "./components/home-scene";
 import { STRINGS } from "./data";
 import type { Hotspot, Lang } from "./data";
@@ -29,7 +30,7 @@ export default function AtHomePage() {
         <header className="mb-2 shrink-0 text-center [@media(max-height:520px)]:mb-1">
           {/* eslint-disable-next-line @next/next/no-img-element -- static logo asset */}
           <img
-            src="/tri-heal-logo.svg"
+            src={assetPath("/tri-heal-logo.svg")}
             alt="Tri-Heal logo"
             className="mx-auto h-24 w-auto object-contain [@media(max-height:520px)]:h-10"
           />
