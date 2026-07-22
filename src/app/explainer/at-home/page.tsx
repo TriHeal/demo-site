@@ -48,6 +48,7 @@ export default function AtHomePage() {
           lang={lang}
           dir={dir}
           videoSoonLabel={s.videoSoon}
+          legendLabel={s.legend}
           onClose={() => setActive(null)}
         />
       )}
