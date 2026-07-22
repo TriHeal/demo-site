@@ -46,6 +46,7 @@ export const HOTSPOTS: Hotspot[] = [
     },
     x: 52,
     y: 24,
+    video: "/explainer/videos/memory_lake.webm",
   },
   {
     id: 5,

@@ -21,8 +21,8 @@ const SCENES = [
     href: "/explainer/at-home",
     title: { he: "בבית", en: "At Home" },
     description: {
-      he: "הורה וילד/ה, יחד בבית - מטלת הבית ופעילות יער הקשר.",
-      en: "Parent and child, together at home - the take-home assignment and the Bonding Forest activity.",
+      he: "הורה וילד/ה, יחד בבית - מטלת הבית ופעילות היער שלנו.",
+      en: "Parent and child, together at home - the take-home assignment and the Our Forest activity.",
     },
     image: "/explainer-home/living-room-background.png",
   },
