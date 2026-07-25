@@ -6,6 +6,11 @@ export type LegendItem = {
   description: Record<Lang, string>;
 };
 
+export type HotspotVideo = {
+  src: string;
+  label: Record<Lang, string>;
+};
+
 export type Hotspot = {
   id: number;
   badge: Record<Lang, string>;
@@ -13,8 +18,11 @@ export type Hotspot = {
   text: Record<Lang, string>;
   x: number;
   y: number;
-  /** Public path under /public, e.g. "/explainer/videos/memory_lake.webm" */
+  /** Single video, used by hotspots that have one demo */
   video?: string;
+
+  /** Multiple selectable videos for the same hotspot */
+  videos?: HotspotVideo[];
   /** Color key shown under the video (e.g. Our Forest activity cards) */
   legend?: LegendItem[];
 };

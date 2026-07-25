@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { assetPath } from "@/lib/asset-path";
 import type { Hotspot, Lang } from "./types";
 
@@ -19,6 +20,21 @@ export function HotspotModal({
   onClose: () => void;
 }) {
   const hasLegend = Boolean(hotspot.legend?.length);
+
+  const videoOptions =
+    hotspot.videos ??
+    (hotspot.video
+      ? [{ src: hotspot.video, label: { he: "", en: "" } }]
+      : []);
+
+  const [selectedVideoIndex, setSelectedVideoIndex] = useState(0);
+
+  useEffect(() => {
+    setSelectedVideoIndex(0);
+  }, [hotspot.id]);
+
+  const selectedVideo = videoOptions[selectedVideoIndex]?.src;
+  const hasMultipleVideos = videoOptions.length > 1;
 
   return (
     <div
@@ -49,6 +65,25 @@ export function HotspotModal({
           </button>
         </div>
 
+        {hasMultipleVideos ? (
+          <div className="mt-4 flex shrink-0 flex-wrap gap-2 [@media(max-height:520px)]:mt-2">
+            {videoOptions.map((video, index) => (
+              <button
+                key={video.src}
+                type="button"
+                onClick={() => setSelectedVideoIndex(index)}
+                className={
+                  index === selectedVideoIndex
+                    ? "rounded-full bg-[#123B49] px-4 py-2 text-sm font-semibold text-white"
+                    : "rounded-full bg-[#eaf4f2] px-4 py-2 text-sm font-semibold text-[#123B49] hover:bg-[#dcece9]"
+                }
+              >
+                {video.label[lang]}
+              </button>
+            ))}
+          </div>
+        ) : null}
+
         <div
           className={
             hasLegend
@@ -63,17 +98,17 @@ export function HotspotModal({
                 : "w-full shrink-0 overflow-hidden rounded-xl bg-[#0f2422]"
             }
           >
-            {hotspot.video ? (
+            {selectedVideo ? (
               <video
-                key={hotspot.video}
+                key={selectedVideo}
                 className="aspect-video w-full"
                 controls
                 playsInline
                 preload="metadata"
               >
                 <source
-                  src={assetPath(hotspot.video)}
-                  type={hotspot.video.endsWith(".webm") ? "video/webm" : "video/mp4"}
+                  src={assetPath(selectedVideo)}
+                  type={selectedVideo.endsWith(".webm") ? "video/webm" : "video/mp4"}
                 />
               </video>
             ) : (
