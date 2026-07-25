@@ -13,6 +13,7 @@ export const HOTSPOTS: Hotspot[] = [
     },
     x: 22,
     y: 18,
+    video: "/explainer-home/videos/parent-dashboard.mp4",
   },
   {
     id: 2,
@@ -24,7 +25,7 @@ export const HOTSPOTS: Hotspot[] = [
     },
     x: 63,
     y: 20,
-    video: "/explainer-home/videos/forst.webm",
+    video: "/explainer-home/videos/bonding-forest.mp4",
     legend: [
       {
         color: "#6FAFB0",

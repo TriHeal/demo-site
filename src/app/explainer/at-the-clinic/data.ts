@@ -13,6 +13,7 @@ export const HOTSPOTS: Hotspot[] = [
     },
     x: 25,
     y: 35,
+    video: "/explainer/videos/start-session.mp4",
   },
   {
     id: 2,
@@ -24,6 +25,16 @@ export const HOTSPOTS: Hotspot[] = [
     },
     x: 70,
     y: 37,
+    videos: [
+      {
+        src: "/explainer/videos/child-login.mp4",
+        label: { he: "כניסה למשחק", en: "Game login" },
+      },
+      {
+        src: "/explainer/videos/change-avatar.mp4",
+        label: { he: "בחירת אווטאר", en: "Choose avatar" },
+      },
+    ],
   },
   {
     id: 3,
@@ -35,6 +46,7 @@ export const HOTSPOTS: Hotspot[] = [
     },
     x: 41,
     y: 26,
+    video: "/explainer/videos/breathing.mp4",
   },
   {
     id: 4,
@@ -46,7 +58,16 @@ export const HOTSPOTS: Hotspot[] = [
     },
     x: 52,
     y: 24,
-    video: "/explainer/videos/memory_lake.webm",
+    videos: [
+      {
+        src: "/explainer/videos/memory-lake-dashboard.mp4",
+        label: { he: "מסך המטפל", en: "Therapist dashboard" },
+      },
+      {
+        src: "/explainer/videos/memory-lake-tablet.mp4",
+        label: { he: "מסך הילד", en: "Child tablet" },
+      },
+    ],
   },
   {
     id: 5,
@@ -58,6 +79,7 @@ export const HOTSPOTS: Hotspot[] = [
     },
     x: 63,
     y: 26,
+    video: "/explainer/videos/event-processing.mp4",
   },
   {
     id: 6,
@@ -69,6 +91,7 @@ export const HOTSPOTS: Hotspot[] = [
     },
     x: 26,
     y: 58,
+    video: "/explainer/videos/therapist-dashboard.mp4",
   },
 ];
 
