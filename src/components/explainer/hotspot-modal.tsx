@@ -4,6 +4,12 @@ import { useEffect, useState } from "react";
 import { assetPath } from "@/lib/asset-path";
 import type { Hotspot, Lang } from "./types";
 
+function videoMimeType(path: string): string {
+  if (path.endsWith(".webm")) return "video/webm";
+  if (path.endsWith(".mov")) return "video/quicktime";
+  return "video/mp4";
+}
+
 export function HotspotModal({
   hotspot,
   lang,
@@ -108,7 +114,7 @@ export function HotspotModal({
               >
                 <source
                   src={assetPath(selectedVideo)}
-                  type={selectedVideo.endsWith(".webm") ? "video/webm" : "video/mp4"}
+                  type={videoMimeType(selectedVideo)}
                 />
               </video>
             ) : (

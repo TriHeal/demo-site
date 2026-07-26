@@ -1,5 +1,6 @@
 "use client";
 
+import { SceneFrame } from "@/components/explainer/scene-frame";
 import { assetPath } from "@/lib/asset-path";
 import { CONNECTORS, HOTSPOTS } from "../data";
 import type { Hotspot, Lang } from "../data";
@@ -14,7 +15,7 @@ export function HomeScene({
   onSelect: (hotspot: Hotspot) => void;
 }) {
   return (
-    <main className="relative mx-auto aspect-[3/2] max-h-full min-h-0 w-full max-w-[1440px] flex-1 overflow-hidden rounded-[28px] bg-white shadow-[0_18px_60px_rgba(18,59,73,0.15)]">
+    <SceneFrame>
       {/* eslint-disable-next-line @next/next/no-img-element -- static illustration asset */}
       <img
         src={assetPath("/explainer-home/living-room-background.png")}
@@ -56,6 +57,6 @@ export function HomeScene({
           </span>
         </button>
       ))}
-    </main>
+    </SceneFrame>
   );
 }

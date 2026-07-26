@@ -1,5 +1,6 @@
 "use client";
 
+import { SceneFrame } from "@/components/explainer/scene-frame";
 import { assetPath } from "@/lib/asset-path";
 import { CONNECTORS, HOTSPOTS } from "../data";
 import type { Hotspot, Lang } from "../data";
@@ -22,7 +23,7 @@ export function ClinicScene({
   onSelect: (hotspot: Hotspot) => void;
 }) {
   return (
-    <main className="relative mx-auto aspect-[3/2] max-h-full min-h-0 w-full max-w-[1440px] flex-1 overflow-hidden rounded-[28px] bg-white shadow-[0_18px_60px_rgba(18,59,73,0.15)]">
+    <SceneFrame>
       {/* eslint-disable @next/next/no-img-element -- static illustration assets, no next/image optimization needed */}
       {SCENE_IMAGES.map((img) => (
         <img key={img.src} src={assetPath(img.src)} alt={img.alt} className={`pointer-events-none absolute select-none ${img.className}`} />
@@ -63,6 +64,6 @@ export function ClinicScene({
           </span>
         </button>
       ))}
-    </main>
+    </SceneFrame>
   );
 }
