@@ -64,7 +64,7 @@ export const HOTSPOTS: Hotspot[] = [
         label: { he: "מסך המטפל", en: "Therapist dashboard" },
       },
       {
-        src: "/explainer/videos/memory-lake-tablet.mp4",
+        src: "/explainer/videos/memory_lake.webm",
         label: { he: "מסך הילד", en: "Child tablet" },
       },
     ],
