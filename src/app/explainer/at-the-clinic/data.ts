@@ -69,6 +69,7 @@ export const HOTSPOTS: Hotspot[] = [
       },
     ],
   },
+  
   {
     id: 5,
     badge: { he: "עיבוד אירועים", en: "Event processing" },
@@ -79,7 +80,16 @@ export const HOTSPOTS: Hotspot[] = [
     },
     x: 63,
     y: 26,
-    video: "/explainer/videos/event-processing.mp4",
+    videos: [
+      {
+        src: "/explainer/videos/event-processing-dashboard.mp4",
+        label: { he: "מסך המטפל", en: "Therapist dashboard" },
+      },
+      {
+        src: "/explainer/videos/event-processing-game.mp4",
+        label: { he: "מסך הילד", en: "Child game" },
+      },
+    ],
   },
   {
     id: 6,
